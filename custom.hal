@@ -1,0 +1,10 @@
+# Include your customized HAL commands here
+# This file will not be overwritten when you run stepconf again
+
+#Load the Python user module
+loadusr -Wn arduino /home/ciccio/linuxcnc/configs/10060_4th/arduino.py
+
+#Pins for Arduino
+net spindle-ccw motion.spindle-reverse    => arduino.spindle_rev 
+net vacuum_pump iocontrol.0.coolant-flood => arduino.vacuum_pump # M7 M7 M9
+net servo_tool  motion.digital-out-00     => arduino.servo_tool  # M62 

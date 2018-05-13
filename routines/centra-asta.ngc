@@ -1,0 +1,27 @@
+O <centra-asta> sub
+ M5 (turn off the spindle)
+ G21 (mm is machine unit)
+ #<radius>= 
+ #<lenght>= 
+ M103
+ (Probe Point 1)
+ G0 Y5
+ G38.2 Y-10 F200.0
+ #<x1>= 0.0
+ #<y1>= #5062
+ G0 Y5
+ (Go to point 2)
+ G0 X[#<lenght>+6]
+ G0 Y-[[#<radius>]*2.2]
+ G0 X0
+ (Probe Point 2)
+ G38.2 Y10 F200.0
+ #<x2>= 0.0
+ #<y2>= #5062
+ G0 Y-[[#<radius>]*2.2]
+ (Calculate and set the center)
+ #<y_center>= [#<y1>+[#<y2>-#<y1>]/2]
+ G10 L20 P1 Y[[-#<radius>*2.2]-[#<y_center>]]
+ M104
+O <centra-asta> endsub
+M2

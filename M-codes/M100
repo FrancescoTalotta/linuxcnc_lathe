@@ -1,0 +1,4 @@
+#!/bin/bash
+
+telegram-send 'Taglio finito'
+exit 0

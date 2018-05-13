@@ -1,0 +1,12 @@
+#!/bin/bash
+#This routine switches off the linuxcnc pin for the 3d probe
+
+halcmd setp pyvcp.probe_3d_led False
+halcmd setp arduino.probe_3d   False
+
+halcmd net 3D_probe arduino.probe_3d pyvcp.probe_3d
+halcmd net 3D_probe                  pyvcp.probe_3d_led
+
+zenity --warning --text "Scollega il probe a 3 dimensioni"
+
+exit 0

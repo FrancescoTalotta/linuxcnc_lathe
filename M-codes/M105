@@ -1,0 +1,12 @@
+#!/bin/bash
+#This routine set radius and lenght for the centra-asta.ngc routine
+
+yad_data=$(yad --title "Inserisci dati"  --text="Inserisci il raggio (in mm)  e la lunghezza dell'asta (in mm)" --form --field "Raggio" --field="Lunghezza")
+
+radius=$(echo $yad_data | awk 'BEGIN {FS="|" } { print $1 }')
+lenght=$(echo $yad_data | awk 'BEGIN {FS="|" } { print $2 }')
+
+sed -i "4s/.*/ #<radius>= $radius/" /home/ciccio/linuxcnc/configs/10060_4th/routines/centra-asta.ngc
+sed -i "5s/.*/ #<lenght>= $lenght/" /home/ciccio/linuxcnc/configs/10060_4th/routines/centra-asta.ngc
+
+exit 0

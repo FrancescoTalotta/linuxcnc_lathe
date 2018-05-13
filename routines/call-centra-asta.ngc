@@ -1,0 +1,4 @@
+O <call-centra-asta> sub
+ M105
+ O <centra-asta> CALL 
+O <call-centra-asta> endsub

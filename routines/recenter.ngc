@@ -1,0 +1,102 @@
+(Determine Rectangle size and postion and reset home position)
+
+O <recenter> sub
+M5 (turn off the spindle)
+
+
+(Rough Estimation of Size)
+#<_x_lenght> = 36.800
+#<_y_lenght> = 144.700
+#<_z_height> = 20.100
+#<_angle>    = 3.000 (degrees)
+
+(Go to the G54 origin)
+G54
+G0 Z[#<_z_height>+4]
+
+(Go to the Center and Probe Z)
+G0 Z[#<_z_height>+4]
+G0 X[#<_x_lenght>/2] Y [#<_y_lenght>/2]
+G38.2 Z[-#<_z_height>-5] F260.0
+G10 L20 P1 Z0
+G0 Z5.0
+
+(Probe point 1)
+G0 X10.0 Y10.0
+
+G38.2 Z-4.0 F150.0
+#<z1> = #5063
+G0 Z[#<z1>+5]
+G0 Y-10.0
+G38.2 Z[-#<z1>-#<_z_height>*1.5] F240.0
+#<wood_height> = #5063
+(Set intermediate wood height)
+G0 Z[-[#<z1>-#<wood_height>]/2]
+
+G38.2 Y10.0 F240.0
+#<x1> = 10.0
+#<y1> = #5062
+G0 Z5.0
+
+(Probe point 2)
+G0 X[#<_x_lenght>-10.0] Y10.0
+
+G38.2 Z-4.0 F150.0
+#<z2> = #5063
+G0 Z[#<z2>+5.0]
+G0 Y-10.0
+G38.2 Z[#<z2>-#<_z_height>*1.5] F240.0
+#<wood_height> = #5063
+(Set intermediate wood height)
+G0 Z[-[#<z2>-#<wood_height>]/2]
+
+G38.2 Y10.0 F240.0
+#<x2> = [#<_y_lenght>-10.0]
+#<y2> = #5062
+G0 Z5.0
+
+(Probe point 3)
+G0 X10.0 Y[#<_y_lenght>-10.0]
+
+G38.2 Z-4.0 F150.0
+#<z3> = #5063
+G0 Z[#<z3>+5.0]
+G0 X-10.0
+G38.2 Z[#<z3>-#<_z_height>*1.5] F240.0
+#<wood_height> = #5063
+(Set intermediate wood height)
+G0 Z[-[#<z3>-#<wood_height>]/2]
+
+G38.2 X10.0 F240.0
+#<x3> = #5061
+#<y3> = [#<_y_lenght>-10.0]
+G0 Z5.0
+
+(Probe point 4)
+G0 X10.0 Y10.0
+
+G38.2 Z-4.0 F250.0
+#<z4> = #5063
+G0 Z[#<z4>+5.0]
+G0 X-10.0
+G38.2 Z[-#<z4>-#<_z_height>*1.5] F240.0
+#<wood_height> = #5063
+(Set intermediate wood height)
+G0 Z[-[#<z4>-#<wood_height>]/2]
+
+G38.2 X10.0 F240.0
+#<x4> = #5061
+#<y4> = 10.0
+G0 Z5.0
+
+#<F00> = [[#<x1>-#<x2>]*[#<y3>-#<y4>]-[#<y1>-#<y2>]*[#<x3>-#<x4>]]
+
+#<_px> = [[[#<x1>*#<y2>-#<y1>*#<x2>]*[#<x3>-#<x4>]-[#<x1>-#<x2>]*[#<x3>*#<y4>-#<y3>*#<x4>]] / #<F00> ]
+#<_py> = [[[#<x1>*#<y2>-#<y1>*#<x2>]*[#<y3>-#<y4>]-[#<y1>-#<y2>]*[#<x3>*#<y4>-#<y3>*#<x4>]] / #<F00> ]
+
+
+G0 X[#<_px>+0.75] Y[#<_py>+0.75]
+
+O <recenter> endsub
+
+M2

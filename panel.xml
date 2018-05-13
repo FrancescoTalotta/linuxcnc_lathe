@@ -1,0 +1,143 @@
+<pyvcp>
+  <vbox>
+   <relief>RIDGE</relief>
+   <bd>4</bd>
+    <label>
+     <text>"Spindle Speed:"</text>
+     <font>("Helvetica",9)</font>
+    </label>
+    <bar>
+     <halpin>"spindle-speed"</halpin>
+     <max_>24000</max_>
+    </bar>
+  </vbox>
+
+ <button>
+     <halpin>"center-here-xyz"</halpin>
+     <text>"SET G54 Center XYZ"</text>
+     <font>('Fixed',10)</font>
+     <bg>"#7fdbb1"</bg>
+     <fg>"#000000"</fg>
+ </button>
+
+ <button>
+     <halpin>"rapid-to-home"</halpin>
+     <text>"GO Home XYZ"</text> 
+     <font>('Fixed',9)</font>
+     <bg>"#ffc1c8"</bg>
+     <fg>"#000000"</fg>
+ </button>
+
+ <button>
+     <halpin>"rapid-to-home-xy"</halpin>
+     <text>"GO Home XY"</text> 
+     <font>('Fixed',9)</font>
+     <bg>"#ffc1c8"</bg>
+     <fg>"#000000"</fg>
+ </button>
+
+ <button>
+     <halpin>"go-away-xyz"</halpin>
+     <text>"Free Area XYZ"</text> 
+     <font>('Fixed',9)</font>
+     <bg>"#ffc1c8"</bg>
+     <fg>"#000000"</fg>
+ </button>
+
+ <button>
+     <halpin>"recenter"</halpin>
+     <text>"Recenter XY"</text> 
+     <font>('Fixed',9)</font>
+     <bg>"#c8ebf7"</bg>
+     <fg>"#000000"</fg>
+ </button>
+
+ <button>
+     <halpin>"call-centra-asta"</halpin>
+     <text>"Centra Asta"</text> 
+     <font>('Fixed',9)</font>
+     <bg>"#c8ebf7"</bg>
+     <fg>"#000000"</fg>
+ </button>
+
+
+ <hbox>
+     <relief>GROOVE</relief>
+     <bd>3</bd>
+     <label>
+         <text>"PROBE"</text>
+         <font>('Helvetica',13)</font>
+     </label>
+     <led>
+        <halpin>"probe"</halpin>
+        <size>23</size>
+        <on_color>"green"</on_color>
+        <off_color>"red"</off_color>
+      </led>
+
+      <checkbutton>
+         <halpin>"probe_3d"</halpin>
+         <text>"Probe 3D"</text>
+         <font>("Helvetica",10)</font>
+      </checkbutton>
+
+      <rectled>
+         <halpin>"probe_3d_led"</halpin>
+         <height>"12"</height>
+         <width>"12"</width>
+         <on_color>"green"</on_color>
+         <off_color>"red"</off_color>
+      </rectled>
+ </hbox>
+
+
+ <vbox>
+  <labelframe text="Quarto Asse">
+  <font>("Helvetica",12)</font>
+   <relief>RIDGE</relief>
+   <bd>5</bd>
+
+     <button>
+        <halpin>"center-here-a"</halpin>
+        <text>"SET G54 Zero A"</text>
+        <font>('Fixed',9)</font>
+        <bg>"#7fdbb1"</bg>
+        <fg>"#000000"</fg>
+    </button>
+
+    <hbox>
+      <checkbutton>
+         <halpin>"enable_A"</halpin>
+         <text>"Enable A"</text>
+         <font>("Helvetica",11)</font>
+      </checkbutton>
+      <rectled>
+         <halpin>"enable_led"</halpin>
+         <height>"24"</height>
+         <width>"24"</width>
+         <on_color>"green"</on_color>
+         <off_color>"red"</off_color>
+      </rectled>
+    </hbox>
+
+    <vbox>
+     <relief>GROOVE</relief>
+     <bd>2</bd>
+     <label>
+         <text>"Velocita' di rotazione:"</text>
+         <font>("Helvetica",11)</font>
+     </label>
+     <scale>
+        <font>("Helvetica",11)</font>
+        <halpin>"A_axis_speed"</halpin>
+        <resolution>5</resolution>
+        <orient>HORIZONTAL</orient>
+        <min_>0</min_>
+        <max_>600</max_>
+     </scale>
+    </vbox>
+
+  </labelframe>
+ </vbox>
+
+</pyvcp>

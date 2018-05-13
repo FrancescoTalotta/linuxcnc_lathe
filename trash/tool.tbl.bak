@@ -1,0 +1,8 @@
+T01 P1  D0.6 ; Drill 0.6 mm
+T02 P2  D0.7 ; Drill 0.7 mm
+T03 P3  D0.8 ; Drill 0.8 mm
+T04 P4  D0.9 ; Drill 0.9 mm 
+T05 P5  D1.0 ; Drill 1.0 mm
+T06 P6  D1.2 ; Drill 1.2 mm
+T07 P7  D2.0 ; Drill 2.0 mm
+

@@ -1,0 +1,32 @@
+# Include your customized HAL commands here
+# The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
+
+#Set up the rapid to home button
+ net remote-rapid-to-home     halui.mdi-command-00    <= pyvcp.rapid-to-home
+ net remote-rapid-to-home-xy  halui.mdi-command-01    <= pyvcp.rapid-to-home-xy
+ net remote-go-away-xyz       halui.mdi-command-02    <= pyvcp.go-away-xyz
+ net remote-recenter          halui.mdi-command-03    <= pyvcp.recenter
+ #net remote-find-center       halui.mdi-command-04    <= pyvcp.find-center
+ net center-here-a            halui.mdi-command-05    <= pyvcp.center-here-a
+ net center-here-xyz          halui.mdi-command-06    <= pyvcp.center-here-xyz
+ net call-centra-asta         halui.mdi-command-07    <= pyvcp.call-centra-asta
+
+ net probe                    parport.0.pin-11-in-not <= pyvcp.probe
+
+#Set up spindle speed control
+ net spindle-cmd-rpm-abs    => pyvcp.spindle-speed
+ sets spindle-at-speed true
+
+# Enable 4th axis 
+ net enable_A arduino.enable_A <= pyvcp.enable_A
+ net enable_A                  => pyvcp.enable_led
+
+# A axis speed
+ net aspeed <= pyvcp.A_axis_speed-f
+
+# 3D probe
+ net 3D_probe arduino.probe_3d <= pyvcp.probe_3d
+ net 3D_probe                  => pyvcp.probe_3d_led
+
+# Temperature
+ #net water_temp arduino.temperature => pyvcp.temperature 

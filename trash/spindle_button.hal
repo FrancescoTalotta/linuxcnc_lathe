@@ -1,0 +1,20 @@
+#######################################################
+#   sample to emmbedd spindle increase and decrease   #
+#                 button in gmoccapy                  #
+# just place                                          #
+#     -  spindle_button.glade                         #
+#     -  spindle_button.hal                           #
+# in your config dir and add the following lines to   #
+# the [DISPLAY] section of your INI file              #
+#                                                     #
+#######################################################
+
+# EMBED_TAB_NAME = Spindle Button
+# EMBED_TAB_LOCATION = box_custom_4
+# EMBED_TAB_COMMAND = gladevcp -x {XID} -H spindle_button.hal spindle_button.glade
+
+
+net increase   spindle_button.btn_spindle_increase  =>  halui.spindle.increase
+net decrease   spindle_button.btn_spindle_decrease  =>  halui.spindle.decrease
+
+

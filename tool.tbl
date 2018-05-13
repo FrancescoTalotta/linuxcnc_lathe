@@ -1,0 +1,56 @@
+T1 P1 D0.300000 Z-14.329700 ;drill 0.3 mm 
+T2 P2 D0.400000 Z-5.605230 ;drill 0.4 mm 
+T3 P3 D0.500000 Z-5.595430 ;drill 0.5 mm 
+T4 P4 D0.600000 ;drill 0.6 mm 
+T5 P5 D0.700000 ;drill 0.7 mm 
+T6 P6 D0.800000 ;drill 0.8 mm 
+T7 P7 D0.900000 ;drill 0.9 mm 
+T8 P8 D1.000000 ;drill 1.0 mm 
+T9 P9 D1.100000 ;drill 1.1 mm 
+T10 P10 D1.200000 ;drill 1.2 mm 
+T11 P11 D2.000000 Z-3.855870 ;drill 2.0 mm 
+T12 P12 D0.800000 ;end mill flat 0.8 mm 
+T13 P13 D1.000000 Z-0.877199 ;end mill flat 625 plexy 1.0 mm 
+T14 P14 D2.000000 ;end mill flat 625 plexy 2.0 mm 
+T15 P15 D2.000000 Z-5.338300 ;flat wood 2.0 mm 
+T16 P16 D6.000000 Z+3.715390 ;flat wood 6.0 mm 
+T17 P17 D2.000000 Z-0.742732 ;one flute flat 2.0 mm 
+T18 P18 D2.000000 ;hss end mill flat 2.0 mm 
+T19 P19 D3.000000 ;hss end mill flat 3.0 mm 
+T20 P20 D0.100000 ;end mill 15° 0.1 mm 
+T21 P21 D0.100000 ;end mill 45° 0.1 mm 
+T22 P22 D0.100000 ;end mill 30° 0.1 mm 
+T23 P23 D0.200000 Z-12.514100 ;end mill 30° 0.2 mm 
+T24 P24 D0.200000 ;end mill 45° 0.2 mm 
+T25 P25 D0.300000 Z-23.858000 ;end mill 15° 0.3 mm 
+T26 P26 D0.300000 ;end mill 10° 0.5 mm 
+T27 P27 D0.300000 Z-17.179600 ;end mill 10° 0.5 mm 
+T28 P28 D6.000000 Z-13.984500 ;flat wood 6.0 mm 
+T29 P29 D3.000000 Z-27.613328 ;one flute flat 3.0 mm 
+T30 P30 D2.000000 Z-18.724764 ;one flute flat 2.0 mm new 
+T31 P31 D0.700000 Z-28.255400 ;end mill flat 625 plexy 1.0 mm 
+T32 P32 D0.100000 Z-6.897400 ;end mill 15° 0.1mm prismatic 
+T33 P33 D8.000000 ;round-carve wood 8.0mm 
+T34 P34 D10.000000 Z-13.632800 ;round-carve wood 10.0mm 
+T35 P35 D9.900000 Z-13.632800 ;round-wood 10.0mm 
+T36 P36 D9.700000 Z-16.349400 ;flat-wood 10.0mm 
+T37 P37 D22.000000 Z-2.176130 ;v-carve-wood 60° 
+T38 P38 D32.000000 Z-25.971174 ;v-carve-wood 90° 
+T39 P39 D0.800000 Z-13.632800 ;flat 0.8 mm 
+T40 P40 D3.000000 Z-11.003100 ;one flute flat 3.0 mm 
+T41 P41 D2.000000 Z-13.632800 ;one flute flat 2.0 mm 
+T42 P42 D1.000000 Z-13.632800 ;alloy round 1.0 mm 
+T43 P43 D2.000000 Z-13.632800 ;alloy round 2.0 mm 
+T44 P44 D3.000000 Z-13.632800 ;alloy round 3.0 mm 
+T45 P45 D4.000000 Z-13.632800 ;alloy round 4.0 mm 
+T46 P46 D5.000000 Z-13.632800 ;alloy round 5.0 mm 
+T47 P47 D6.000000 Z-13.632800 ;alloy round 6.0 mm 
+T48 P48 D6.000000 Z-13.632800 ;alloy round 6.0 mm professional 
+T49 P49 D0.800000 Z-13.632800 ;pcb holes 0.8mm 
+T50 P50 D8.000000 Z-13.632800 ;flat-wood 8.0mm 
+T51 P51 D0.500000 ;flat engraving 0.5mm 
+T52 P52 D0.400000 Z-12.837062 ;flat engraving 0.4mm 
+T53 P53 D3.000000 Z-12.837062 ;flat engraving 0.4mm 
+T54 P54 D3.000000 ;one flute 3.0mm special ALU
+T55 P55 D3.000000 ;one flute 3.0mm EVO
+T56 P56 D0.200000 ;Bulino 0.2mm PCB

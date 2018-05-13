@@ -1,0 +1,12 @@
+#!/bin/bash
+#This routine switches on the 4-th axis
+
+zenity --warning --text "Hai acceso il quarto asse?"
+
+halcmd unlinkp arduino.enable_A
+halcmd unlinkp pyvcp.enable_led
+
+halcmd setp pyvcp.enable_led True
+halcmd setp arduino.enable_A True
+
+exit 0

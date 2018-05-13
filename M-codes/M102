@@ -1,0 +1,4 @@
+#!/bin/bash
+
+zenity --warning --text "HAI ACCESO IL MANDRINO?"
+exit 0

@@ -1,0 +1,10 @@
+#!/bin/bash
+#This routine switches off the linuxcnc pin for the 3d probe
+
+halcmd setp pyvcp.enable_led False
+halcmd setp arduino.enable_A False
+
+halcmd net enable_A arduino.enable_A pyvcp.enable_A
+halcmd net enable_A                  pyvcp.enable_led
+
+exit 0
