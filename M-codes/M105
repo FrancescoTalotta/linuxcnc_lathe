@@ -6,7 +6,12 @@ yad_data=$(yad --title "Inserisci dati"  --text="Inserisci il raggio (in mm)  e 
 radius=$(echo $yad_data | awk 'BEGIN {FS="|" } { print $1 }')
 lenght=$(echo $yad_data | awk 'BEGIN {FS="|" } { print $2 }')
 
-sed -i "4s/.*/ #<radius>= $radius/" /home/ciccio/linuxcnc/configs/10060_4th/routines/centra-asta.ngc
-sed -i "5s/.*/ #<lenght>= $lenght/" /home/ciccio/linuxcnc/configs/10060_4th/routines/centra-asta.ngc
+if [ ! -z "$radius" ]; then
+ sed -i "4s/.*/ #<radius>= $radius/" /home/ciccio/linuxcnc/configs/10060_4th/routines/centra-asta.ngc
+fi
+
+if [ ! -z "$lenght" ]; then
+ sed -i "5s/.*/ #<lenght>= $lenght/" /home/ciccio/linuxcnc/configs/10060_4th/routines/centra-asta.ngc
+fi
 
 exit 0
