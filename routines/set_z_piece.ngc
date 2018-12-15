@@ -1,0 +1,14 @@
+O <set_z_piece> sub
+  G21
+  G49
+  G54
+  #<probe_height> = 19.32
+  #<radious> = 7
+  G0 Z15
+  M108
+  G38.2 Z-30 F120
+  G10 L10 P4 Z[#<radious>]
+  G0 Z20
+  G43
+  M109
+O <set_z_piece> endsub

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+(sleep 1 && wmctrl -F -a "Probe" -b add,above) &
+yad --title "Probe" --image=/home/ciccio/linuxcnc/configs/10060_4th/M-codes/qs.png --geometry="290x120" --text="<big>Hai fatto il probe? Hai fatto il 'Centra Asta'?</big>" --button="STOP" --button="Continua"
+
+case $? in
+    0)sleep 2; halcmd setp halui.program.stop True
+    ;;
+esac
+exit 0
